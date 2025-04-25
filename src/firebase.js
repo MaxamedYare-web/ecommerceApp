@@ -160,7 +160,7 @@ barsBtn.addEventListener("click",()=>{
 })
 
 closeBtn.addEventListener("click",()=>{
-  nav.style.height="10%"
+  nav.style.height="8%"
   closeBtn.style.opacity="0"
   barsBtn.style.opacity="1"
   barsBtn.style.zIndex="3"

@@ -340,9 +340,12 @@ border: 2px solid var(--font-color-border);
     position: absolute;
     inset: 300px 0;
     top: 0;
-    height: 10%;
+    height: 8%;
     overflow: hidden;
     transition: 1s;
+    display: flex;
+    align-items: center;
+    z-index: 3;
   }
   nav ul li a{
     color: #fff;
@@ -393,4 +396,108 @@ border: 2px solid var(--font-color-border);
     margin-top: 30px;
 }
 
+
+
 }
+@media (max-width:472px){
+    .main-dashbord{
+        flex-direction: column;
+    }
+  .content-account-info{
+    flex-direction: column;
+    width: 100%;
+  }
+  .person-account{
+    width: 100%;
+  }
+  .login-deatls{
+    margin: 0;
+    width: 100%;
+  }
+  .order-status{
+    width: 100%;
+    margin: 0;
+  }
+  .person-account, .login-deatls, .order-status{
+    margin-top: 15px;
+  }
+  .total-order,.pending-order,.complate-order{
+    margin-top: 15px;
+  }
+  nav{
+    width: 100%;
+    margin: 0;
+    border: none;
+    background: #fa8232;
+    position: absolute;
+    inset: 300px 0;
+    top: 0;
+    height: 8%;
+    overflow: hidden;
+    transition: 1s;
+
+  }
+  nav ul li a{
+    color: #fff;
+    font-weight: bold;
+  }
+  nav ul li i{
+    color: #fff;
+  }
+  .menus{
+    display: block;
+    position: absolute;
+    z-index: 5;
+  top: 2%;
+  font-size: 3rem;
+  right: 5%;
+  }
+  .menus i{
+    position: absolute;
+    right: 5%;
+    color: #fff;
+  }
+  .menus .fa-close{
+    opacity: 0;
+    transition: 1s;
+    z-index: -2;
+  }
+.profile{
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    border: none;
+    padding: 20px;
+}
+.profile form{
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+  margin-left: 0;
+}
+.profile-title form .display-name input{
+    width: 100%;
+}
+.container-profile{
+    margin: 0;
+    padding: 20px;
+    border: none;
+    margin-top: 30px;
+}
+#dashbord{
+    margin: 0;
+    padding: 0;
+position: absolute;
+left: -8%;
+bottom: 0;
+margin-bottom: 20px;
+z-index: -3;
+width: 90%;
+margin-top: 20px;
+
+}
+
+
+}
+

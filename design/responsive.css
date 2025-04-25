@@ -130,8 +130,6 @@
     width: 100%;
   }
   .popup-carts, .login-in{
-    position: absolute;
-    right: 1% !important;
     padding: 20px;
     width: 310px;
   }

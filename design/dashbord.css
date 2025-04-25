@@ -486,7 +486,7 @@ border: 2px solid var(--font-color-border);
     margin-top: 30px;
 }
 #dashbord{
-    margin: 0;
+    margin: 40px;
     padding: 0;
 position: absolute;
 left: -8%;
@@ -494,8 +494,8 @@ bottom: 0;
 margin-bottom: 20px;
 z-index: -3;
 width: 90%;
-margin-top: 20px;
 
+top: 10%;
 }
 
 

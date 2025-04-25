@@ -126,6 +126,23 @@
     }
   .logo span{
     display: none;
+  }.carts{
+    width: 100%;
   }
-  
+  .popup-carts, .login-in{
+    position: absolute;
+    right: 1% !important;
+    padding: 20px;
+    width: 310px;
+  }
+  .popup-carts button{
+    font-size: 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .login-in #login-text {
+    font-size: 18px;
+  }
 }

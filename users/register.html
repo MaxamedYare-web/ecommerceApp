@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <link rel="stylesheet" href="/design/register.css">
+    <title>Register</title>
+</head>
+<body>
+    
+    <div id="user-login" class="register">
+        <div class="login-in register-group">
+          <div class="register-title">
+            <h2 id="login-text" class="log-in login-text">Login</h2>
+            <h2 id="login-text" class="regiter-btn-Top">Register</h2>
+          </div>
+          <strong class="border-bg"></strong>
+          <hr>
+          <div class="login-acount">
+            <form id="register-form">
+              <div class="email you-name">
+                <label for="name">You Name</label>
+                <input class="name-register" id="name" type="text" placeholder="You Name...">
+              </div>
+              <div class="email">
+                <label for="email">Email Address</label>
+                <input id="email" class="email-register" type="text" placeholder="Email Address...">
+              </div>
+              <div class="password">
+                <label for="Password">Password</label>
+                <input id="Password" class="password-register" type="password" placeholder="Pasword...">
+                <i id="show-password" class="fa-regular fa-eye"></i>
+              </div>
+              <button>Register <i class="fa fa-arrow-right"></i></button>
+            </form>
+          </div>
+        </div>
+        <!-- login -->
+        <div id="user-login" class="user-login-group">
+            <div class="login-in login">
+              <div class="login-acount">
+                <form id="login-form">
+                  <div class="email">
+                    <label for="">Email Address</label>
+                    <input class="loginEmail"  type="text" placeholder="Email Address...">
+                  </div>
+                  <div class="password">
+                    <label for="">Password</label>
+                    <input class="password-input" type="password" placeholder="Pasword...">
+                    <i id="show-password" class="fa-regular fa-eye"></i>
+                  </div>
+                  <button>Login <i class="fa fa-arrow-right"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        <div class="main-article">
+            <article>
+                <i class="fa fa-close"></i>
+                <h2>Please fill All input Form</h2>
+                <p>Fadlan Buuxi dhamaan inpudyada mid maran lama rabo</p>
+             </article>
+        </div>
+      </div>
+<script type="module" src="/src/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "inter";
+}
+:root{
+    --font-color-border:rgba(95, 108, 114,0.3);
+    --font-color-gray:rgb(95, 108, 114);
+    --bg-primary:#fa8232;
+    --blu-color: #2da5f3;
+}
+nav{
+    width: 264px;
+  /* padding: 20px; */
+  border: 2px solid var(--font-color-border);
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+   
+}
+nav ul li{
+  
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    color: var(--font-color-gray);
+    padding: 20px;
+}
+
+nav ul li a{
+    list-style: none;
+    text-decoration: none;
+    margin-left: 15px;
+    color: var(--font-color-gray);
+}
+nav ul li i{
+    font-size: 24px;
+}
+nav ul li:hover{
+    background-color: var(--bg-primary);
+    color: #fff;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    color: #fff;
+    transition: 0.5s;
+}
+/* top contact */
+.main-dashbord{
+    display: flex;
+}
+.main-dashbord #dashbord,nav{
+    margin-left: 55px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.dashbord-title{
+   width: 100%;
+}
+.dashbord-title p{
+    max-width: 423px;
+    margin: 20px 0;
+}
+.dashbord-title strong{
+color: var(--blu-color);
+}
+.content-account-info{
+    display: flex;
+}
+
+.person-account,.login-deatls,.order-status{
+    width: 312px;
+    border: 2px solid var(--font-color-border);
+    width: 312px;
+    border-radius: 5px;
+    
+}
+.profile-img{
+    display: flex;
+    align-items: center;
+    padding: 1px;
+}
+.person-account #acount-text,.login-deatls h2{
+    padding: 15px;
+    border-bottom: 2px solid var(--font-color-border);
+    text-transform: uppercase;
+}
+.profile-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+   
+}
+.profile-img #peson-name{
+    font-size: 16px;
+    font-weight: 600;
+}
+.person-image-title p{
+    color: var(--font-color-gray);
+    margin-top: 8px;
+}
+.person-deatails .email,.phone{
+    display: flex;
+    padding: 5px 10px;
+}
+.person-deatails .email p,.phone p{
+ padding-left: 5px;
+ color: var(--font-color-gray);
+}
+.person-deatails button{
+    background: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid var(--blu-color);
+    border-radius: 2px;
+    color: var(--blu-color);
+    font-weight: bold;
+}
+.login-deatls,.order-status{
+    margin-left: 20px;
+}
+
+.you-joined{
+    margin-top: 10px;
+}
+.last-login,.you-joined{
+display: flex;
+    padding:0px 20px;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.last-login p,.you-joined p{
+color: var(--font-color-gray);
+padding: 10px;
+}
+.order-status{
+    border: none;
+}
+.order-status{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+}
+.order-status .total-order,.pending-order,.complate-order{
+    display: flex;
+  padding: 20px;
+  background: rgba(45, 165, 243,0.3);
+  border-radius: 5px;
+  align-items: center;
+  
+}
+.pending-order{
+    background: rgba(250, 130, 50,0.3);
+}
+.order-status i{
+    font-size: 2rem;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+   color:var(--blu-color);
+}
+.pending-order i{
+  color: #fa8232;
+}
+.complate-order{
+    background: rgba(0, 128, 0,0.2);
+}
+.complate-order i{
+   color: rgb(8, 189, 8);
+}
+.order-all{
+    margin: 0 15px;
+    font-size: 18px;
+}
+.order-all p{
+    margin-top: 5px;
+    color: var(--font-color-gray);
+}
+/* profile style */
+
+.container-profile{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    border: 2px solid var(--font-color-border);
+    margin-left: 15px;
+    border-radius: 5px;
+}
+.container-profile h2{
+    text-transform: uppercase;
+    width: 100%;
+    border-bottom: 2px solid var(--font-color-border);
+    padding: 10px;
+}
+.profile img{
+    width: 176px;
+    height: 176px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+}
+
+.profile form{
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.profile-title form .display-name{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.profile-title form .display-name label{
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.profile-title form .display-name input{
+ width: 360px;
+ height: 44px;
+ padding:  0 10px;
+outline: none;
+border-radius: 5px;
+border: 2px solid var(--font-color-border);
+}
+.profile-title form button{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 15PX;
+    border: NONE;
+    background: var(--bg-primary);
+    color: #fff;
+    font-weight: bold;
+    width: 162px;
+    border-radius: 3px;
+}
+#editAccount:hover{
+    opacity: 0.7;
+    transition: 1s;
+    cursor: pointer;
+}
+.mainShowMessage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.showMessageSuccess{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: green;
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 2.5rem;
+}
+.showMessageSuccess i{
+  font-size: 3rem;
+}
+.showMessageSuccess span{
+  margin: 10px;
+}
+
+.mainProfileImage input{
+    display: none;
+}
+.mainProfileImage label{
+    margin-top: 25px;
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+    background: #2da5f3;
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+.menus{
+    display: none;
+}
+
+@media (max-width:900px){
+    .main-dashbord{
+        flex-direction: column;
+    }
+  .content-account-info{
+    flex-direction: column;
+    width: 100%;
+  }
+  .person-account{
+    width: 100%;
+  }
+  .login-deatls{
+    margin: 0;
+    width: 100%;
+  }
+  .order-status{
+    width: 100%;
+    margin: 0;
+  }
+  .person-account, .login-deatls, .order-status{
+    margin-top: 15px;
+  }
+  .total-order,.pending-order,.complate-order{
+    margin-top: 15px;
+  }
+  nav{
+    width: 100%;
+    margin: 0;
+    border: none;
+    background: #fa8232;
+    position: absolute;
+    inset: 300px 0;
+    top: 0;
+    height: 10%;
+    overflow: hidden;
+    transition: 1s;
+  }
+  nav ul li a{
+    color: #fff;
+    font-weight: bold;
+  }
+  nav ul li i{
+    color: #fff;
+  }
+  .menus{
+    display: block;
+    position: absolute;
+    z-index: 5;
+  top: 2%;
+  font-size: 3rem;
+  right: 5%;
+  }
+  .menus i{
+    position: absolute;
+    right: 5%;
+    color: #fff;
+  }
+  .menus .fa-close{
+    opacity: 0;
+    transition: 1s;
+    z-index: -2;
+  }
+.profile{
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    border: none;
+    padding: 20px;
+}
+.profile form{
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+  margin-left: 0;
+}
+.profile-title form .display-name input{
+    width: 100%;
+}
+.container-profile{
+    margin: 0;
+    padding: 20px;
+    border: none;
+    margin-top: 30px;
+}
+}

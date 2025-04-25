@@ -1,0 +1,86 @@
+@media ( max-width:900px){
+    .main-product{
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+        width: 100%;
+
+    }
+    .summer-product{
+        grid-column: 1 / span 1;
+        grid-row: 2 /span 2 ;
+        width: 100%;
+    }
+    .flip{
+        grid-row: 4 / span 4;
+        grid-column: 1 / sapn 1;
+        width: 100%;
+       
+    }
+    .main-delivery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .security{
+        border-left: none;
+    }
+    .best-deals-products{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-products-deals{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .xbox-series{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width:700px){
+   .search-group{
+    width: 100%;
+   }
+ .main-category{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ }
+ .main-category select{
+    width: 100%;
+ }
+ .main-category select option{
+    background: #fff;
+    color: #5f6c72;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+.category{
+    margin-top: 15px;
+    width: 100%;
+    font-size: 13px;
+}
+}
+
+@media (max-width:600px){
+    .category{
+        margin-top: 15px;
+        width: 100%;
+        font-size: 10px;
+    }
+    .social-meadia span{
+        display: none;
+    }
+    .logo span{
+        font-size: 12px;
+    }
+    .midle-product{
+        display: grid;
+        width:100%;
+        padding: 15px;
+    }
+}

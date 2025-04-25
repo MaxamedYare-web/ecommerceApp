@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <link rel="stylesheet" href="/design/dashbord.css" />
+    <title>Dahsboard</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="main-dashbord">
+        <!-- start navbar dashbord -->
+         <div class="menus">
+          <i id="barsBtn" class="fa fa-bars"></i>
+          <i id="closeBtn" class="fa fa-close"></i>
+         </div>
+        <nav>
+          <ul>
+            <li><i class="fa-solid fa-shop"></i><a href="">Dahsboard</a></li>
+            <li>
+              <i class="fa-solid fa-clock-rotate-left"></i
+              ><a href="">Order History</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping"></i
+              ><a href="">Shopping Cart</a>
+            </li>
+            <li>
+              <i class="fa-regular fa-heart"></i
+              ><a href="./wishlist.html">Wishlist</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-gear"></i><a class="settingBtn">Setting</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-right-from-bracket"></i
+              ><a href="">log-out</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- End navbar dashbord -->
+        <!-- start dashoard info -->
+        <section id="dashbord">
+          <!-- start dashbord title -->
+          <div class="dashbord-title">
+            <h3>Hello, Mohamed</h3>
+            <p>
+              From your account dashbord. you can easily check & view your
+              Recent order, manage you <strong>Shipping</strong> and edit you
+              <strong>Password</strong> and <strong>account Details</strong>
+            </p>
+          </div>
+          <!-- end dashbord title -->
+          <!--start main dashbord description -->
+          <div class="top-content">
+            <div class="content-account-info">
+              <div class="person-account">
+                <h2 id="acount-text">ACCOUNT INFO</h2>
+                <div class="profile-img">
+                  <img
+                    id="imageProfile"
+                    src="/assets/user-images/pexels-kelvin809-810775.jpg"
+                    alt=""
+                    class="getImageProfil"
+                  />
+                  <div class="person-image-title">
+                    <h2 id="peson-name" class="getNameText">Mohamed Salah</h2>
+                    <p id="countryInfo" class="getCountryText">Mogadishu -KM4 Somalia</p>
+                  </div>
+                </div>
+                <div class="person-deatails">
+                  <div class="email">
+                    <strong>Email:</strong>
+                    <p id="email-text"></p>
+                  </div>
+                  <div class="phone">
+                    <strong>Phone:</strong>
+                    <p id="phoneNumber" class="getPhoneText">+25261xxxxxxx</p>
+                  </div>
+                  <button id="editAccount">EDIT ACCOUNT</button>
+                </div>
+              </div>
+              <!-- login -->
+              <div class="login-deatls">
+                <h2>Account Data Time</h2>
+                <div class="you-joined">
+                  <strong>You Joined: </strong>
+                  <p id="joined-time">arbaco 2025</p>
+                </div>
+                <div class="last-login">
+                  <strong>Last Login:</strong>
+                  <p id="last-login-time">12:00 mon 2025</p>
+                </div>
+              </div>
+              <!-- status -->
+              <div class="order-status">
+                <div class="total-order">
+                  <i class="fa-solid fa-rocket"></i>
+                  <div class="order-number order-all">
+                    <strong>154</strong>
+                    <p>Total Orders</p>
+                  </div>
+                </div>
+                <div class="pending-order">
+                  <i class="fa-solid fa-spinner"></i>
+                  <div class="pending-number order-all">
+                    <strong>05</strong>
+                    <p>Pending Orders</p>
+                  </div>
+                </div>
+                <div class="complate-order">
+                  <i class="fa-regular fa-circle-check"></i>
+                  <div class="complate-number order-all">
+                    <strong>149</strong>
+                    <p>Complated Orders</p>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+          <!--end main dashbord description -->
+        </section>
+        <!-- end dashoard info -->
+        <div class="container-profile">
+          <h2>Account SETTING</h2>
+          <div class="profile">
+         
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/firebase.js"></script>
+  </body>
+</html>

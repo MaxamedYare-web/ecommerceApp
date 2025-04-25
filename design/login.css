@@ -1,0 +1,104 @@
+#user-login{
+    position: relative;
+ 
+}
+:root{
+    --font-color-border:rgba(95, 108, 114,0.3);
+    --font-color-gray:rgb(95, 108, 114);
+    --bg-primary:#fa8232;
+    --blu-color: #2da5f3;
+}
+
+.login-in{
+    position: absolute;
+    color: black;
+    width: 424px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0 , 0, 0.5);
+    padding: 20PX;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    z-index: 3;
+  top: 120%;
+  border-radius: 5px;
+  display: none;
+}
+
+.login-in #login-text{
+    display: flex;
+    text-align: center;
+    padding: 15px;
+    justify-content: center;
+   font-weight: bold;
+   font-size: 1.8rem;
+}
+.login-acount form .email,form .password{
+display: flex;
+flex-direction: column;
+margin: 15px;
+position: relative;
+}
+.login-acount form .email input,form .password input{
+margin-top: 8px;
+padding: 10px 20px;
+outline: none;
+font-weight: bold;
+}
+form .password i{
+    position: absolute;
+    right: 3%;
+    bottom: 10%;
+}
+form button{
+margin:0 15px 0px 15px;
+padding: 10px 20px;
+width: 92%;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+border: none;
+border-radius: 5px;
+font-size: 1.1rem;
+font-weight: bold;
+color: #fff;
+background: var(--bg-primary);
+}
+.create-account{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+article{
+  display: flex;
+  align-items: center;
+  color: var(--font-color-gray);
+  width: 100%;
+  
+}
+article #line-left,article #line-right{
+width: 60px;
+height: 1px;
+background: var(--font-color-gray);
+margin: 3px;
+
+}
+.create-account button{
+    margin-top: 20px;
+    width: 100%;
+    padding:  15px;
+    font-weight: bold;
+    background: none;
+    color: #fa8232;
+    border: 2px solid var(--bg-primary);
+    border-radius: 5px;
+}
+.active-eye{
+    display: block;
+}
+
+
+

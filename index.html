@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+  <link rel="stylesheet" href="./design/style.css" />
+  <link rel="stylesheet" href="/design/login.css">
+  <link rel="stylesheet" href="/design/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Halkan Electronic</title>
+</head>
+
+<body>
+  <header>
+    <!-- header top section -->
+    <section class="top-header">
+      <div class="social-meadia">
+        <span>Welcome to Halkan Electronic Ecommerce Store</span>
+        <div class="social-flowres">
+          <span>Follow us:</span>
+          <i class="fa-brands fa-tiktok"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-telegram"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <div class="lang">
+            <select>
+              <option value="">English</option>
+              <option value="">SOMALI</option>
+            </select>
+            <select>
+              <option value="">USD</option>
+              <option value="">Shiling</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- searchin  -->
+      <div class="searching">
+        <div class="search-group">
+          <!-- start logo -->
+          <div class="logo">
+            <img src="./assets/header-images/halkan-logo.png" alt="" />
+            <span>Halkan Electronic</span>
+          </div>
+          <!-- end logo -->
+          <div id="input-group">
+            <input type="text" placeholder="Search For anything..." />
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+          <!-- end logo -->
+          <!-- start carts -->
+          <div class="carts">
+            <div class="cartinfo">
+              <div class="total-order">
+                <i class="fa fa-cart-shopping cart-shopping-order"></i>
+                <h6 id="total-order" class="cart-shopping-order"></h6>
+                <i class="fa-regular fa-heart"></i>
+                <i id="userloginIcon" class="fa-regular fa-user">
+                </i>
+                <div id="user-login">
+                 
+                  <div class="login-in">
+                    <div class="mainShowMessage">
+                      <div class="showMessageSuccess">
+                        <i class="fa-regular fa-circle-check"></i>
+                <span>SuccessFull Data Was Changed!</span>
+                      </div>
+                      </div>
+                    <span id="login-text">Login Your Account</span>
+                    <div class="login-acount">
+                      <form id="login-form">
+                        <div class="email">
+                          <label for="">Email Address</label>
+                          <input class="loginEmail" type="email" placeholder="Email Address...">
+                        </div>
+                        <div class="password">
+                          <label  for="">Password</label>
+                          <input class="password-input" type="password" placeholder="Pasword...">
+                          <i id="show-password" class="fa-regular fa-eye"></i>
+                        </div>
+                        <button>Login <i class="fa fa-arrow-right"></i></button>
+                      </form>
+                      <div class="create-account">
+                        <article>
+                          <span id="line-left"></span>
+                          <span id="account-title">Don't have account</span>
+                          <span id="line-right"></span>
+                        </article>
+                        <button id="btn-ancer"><a href="/users/register.html">CREATE ACCOUNT</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--start popupCarts -->
+              <div class="popup-carts">
+                <h3>Shopping Cart <strong id="total-selected"></strong></h3>
+                <div id="shopping-pop"></div>
+                <hr>
+                <div class="sub-total">
+                  <div class="sub">
+                    <span>Sub-Total</span>
+                    <span id="sub-title"></span>
+                  </div>
+                  <button>CHECKOUT NOW <i class="fa fa-arrow-right"></i></button>
+                </div>
+                <!--end popupCarts -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- header category -->
+    <section id="header-category">
+      <div class="main-category">
+        <select>
+          <option value="">All category</option>
+          <option value="">Computer & laptop</option>
+          <option value="">Computer Accessories</option>
+          <option value="">SmartPhone ></option>
+          <option value="">Headphone</option>
+          <option value="">Mobile Accessories</option>
+          <option value="">Gaming Console</option>
+          <option value="">Camera & Photo</option>
+          <option value="">TV & Home Appliances</option>
+          <option value="">Watchs & Accessories</option>
+          <option value="">GPS & Navigation</option>
+          <option value="">Warable Technology</option>
+        </select>
+        <div class="category">
+          
+          <div class="location">
+            <i class="fa fa-location-dot"></i>
+            <span>Track Order</span>
+          </div>
+          <div class="compare">
+            <i class="fa-solid fa-code-compare"></i>
+            <span>Compare</span>
+          </div>
+          <div class="support">
+            <i class="fa-solid fa-headphones"></i>
+            <span>Customer Support</span>
+          </div>
+          <div class="help">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Need Help</span>
+          </div>
+          <div class="phone">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>+25616825183</span>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+  </header>
+  <div class="containers">
+    <!-- header middle product -->
+    <section id="header-middle-product">
+      <div class="midle-product">
+        <div class="main-product">
+          <div class="main-product-title">
+            <div class="best-info">
+              <small></small>
+              <span id="best-title">the best place to play</span>
+            </div>
+            <h2 class="header-title-product">Halgan electronic</h2>
+            <p class="header-description-product">
+              Save up to 50% on select Halgan product. Get 3 months of PC
+              Product Pass for $2 USD
+            </p>
+            <button class="btn-header">
+              SHOP NOW <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="product-image">
+            <img id="header-product-img" src="assets/header-images/Image.png" alt="" />
+            <span id="header-price-product">$299</span>
+          </div>
+          <form class="radio-input">
+            <input class="all-radio1" type="radio" checked name="radio" />
+            <input class="all-radio2" type="radio" name="radio" />
+            <input class="all-radio3" type="radio" name="radio" />
+          </form>
+        </div>
+        <!-- summer sales -->
+        <div class="summer-product">
+          <div id="summer-sales-title">
+            <small>SUMMER SALES</small>
+            <span>New Google Pixel 6 Pro</span>
+            <button class="btn-header">
+              SHOP NOW <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <!-- summer image -->
+          <div class="sumer-image">
+            <span>29% OFF</span>
+            <img src="./assets/header-images/image 5.png" alt="" />
+          </div>
+        </div>
+        <!-- flip Buds pro -->
+        <div class="flip">
+          <img src="./assets/header-images/image 4.png" alt="" />
+          <div class="flip-title">
+            <h3>Xiaomi flipBuds Pro</h3>
+            <span>$299 USD</span>
+            <button class="btn-header">
+              SHOP NOW <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Deliver section -->
+    <section id="delivery">
+      <div class="main-delivery">
+        <!-- fast delivery -->
+        <div class="fast-delivery">
+          <i class="fa-solid fa-truck-fast"></i>
+          <div class="fast-deliver-title">
+            <span>FAST DELIVERY </span>
+            <p>Delivery in 24/H</p>
+          </div>
+        </div>
+        <!-- endt delivery -->
+        <!-- start goal delivery -->
+        <div class="goal-delivery">
+          <i class="fa-solid fa-trophy"></i>
+          <div class="goal-title">
+            <span>24 HOURS RETURN</span>
+            <p>100% money-back guarante</p>
+          </div>
+        </div>
+        <!-- end goal -->
+        <!-- security start -->
+        <div class="security">
+          <i class="fa-solid fa-money-check"></i>
+          <div class="security-title">
+            <span>SECURITY PAYMENT</span>
+            <p>You money is safe</p>
+          </div>
+        </div>
+        <!-- end security -->
+        <!-- start support -->
+        <div class="support-live">
+          <i class="fa-solid fa-headset"></i>
+          <div class="support-title">
+            <span>SUPPORTS 24/7</span>
+            <p>Live contact/message</p>
+          </div>
+        </div>
+        <!-- end support -->
+      </div>
+    </section>
+    <!-- best deals section -->
+    <section id="best-deals">
+      <div class="bestdeal-info">
+        <!-- best deal time -->
+        <div class="best-deal-time">
+          <span>Best Deals</span>
+          <small>Deals ends in</small>
+          <span id="data-deals">16d : 21h : 57m : 23s</span>
+        </div>
+        <!-- end best deal time -->
+        <!-- start best deal products -->
+        <div class="best-deals-products">
+          <!--start xbox-series -->
+          <div class="xbox-series">
+            <div class="xbox-series-img">
+              <!-- start xbox discount -->
+              <div class="xbox-discount">
+                <span>32% OFF</span>
+                <span>HOT</span>
+              </div>
+              <!-- end xbox discount -->
+              <img src="/assets/todey-best-deals/Image1.png" alt="" />
+              <div class="xbox-rate">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <span>(52,677)</span>
+              </div>
+              <span id="xbox-title">Xbox Series S - 512GB SSD Console with Wireless Controller -
+                EU Versio...</span>
+              <div class="xbox-price">
+                <span id="xbox-discount-amount">$865.99</span>
+                <span id="xbox-price-amount">$442.12</span>
+              </div>
+              <p>
+                Games built using the Xbox Series X|S development kit showcase
+                unparalleled load times, visuals.
+              </p>
+              <div class="xbox-cart">
+                <i class="fa fa-heart"></i>
+                <button>
+                  <i class="fa fa-cart-shopping y"></i>ADD TO CART
+                </button>
+                <i class="fa fa-eye"></i>
+              </div>
+            </div>
+          </div>
+          <!--end xbox-series -->
+          <!-- main-deals products -->
+          <div class="main-products-deals">
+            <!--start earbuds-wireless -->
+            <div class="earbuds dh">
+              <div class="mainShowMessage">
+        <div class="showMessageSuccess">
+          <i class="fa-regular fa-circle-check"></i>
+          <span>SuccessFull Data Was Changed!</span>
+        </div>
+        </div>
+              <div class="earbuds-img">
+                <span>SOLD OUT</span>
+                <img src="/assets/todey-best-deals/Image (1).png" alt="" />
+              </div>
+              <p>Bose Sport earbuds-wireless earphones-Bluetooth in ear</p>
+              <span class="price-design">$2300</span>
+              <div class="earbuds-cart cartsbtn">
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-cart-shopping"></i>
+                <i class="fa fa-eye"></i>
+              </div>
+            </div>
+            <!--end earbuds-wireless -->
+            <!-- start simple mobile -->
+            <div class="simple-mobile dh">
+              <div class="mainShowMessage">
+        <div class="showMessageSuccess">
+          <i class="fa-regular fa-circle-check"></i>
+  <span>SuccessFull Data Was Changed!</span>
+        </div>
+        </div>
+              <img src="/assets/todey-best-deals/Image (2).png" alt="" />
+              <p>Simple mobile 4G LTE Prepaid Smartphone</p>
+              <span class="price-design">$220</span>
+              <div class="simple-cart cartsbtn">
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-cart-shopping "></i>
+                <i class="fa fa-eye"></i>
+              </div>
+            </div>
+            <!-- end simple mobile -->
+            <!-- start 4k uhd led -->
+            <div class="chromecast dh">
+              <div class="mainShowMessage">
+        <div class="showMessageSuccess">
+          <i class="fa-regular fa-circle-check"></i>
+  <span>SuccessFull Data Was Changed!</span>
+        </div>
+        </div>
+              <div class="chromecast-img">
+                <span>19% OFF</span>
+                <img src="/assets/todey-best-deals/Image (3).png" alt="" />
+              </div>
+              <p>4K UHD LED Smart TV with chromecast Built-in</p>
+              <div class="price">
+                <span class="discount" id="discount-chromecast">$865</span>
+                <span class="price-design">$150</span>
+              </div>
+              <div class="chrome-cart cartsbtn">
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-cart-shopping "></i>
+                <i class="fa fa-eye"></i>
+              </div>
+            </div>
+            <!-- end 4k uhd led -->
+            <!--start sony -->
+            <div class="sony dh">
+              <div class="mainShowMessage">
+        <div class="showMessageSuccess">
+          <i class="fa-regular fa-circle-check"></i>
+  <span>SuccessFull Data Was Changed!</span>
+        </div>
+        </div>
+              <img src="/assets/todey-best-deals/Image.png" alt="" />
+              <p>Sony DSCHX8 Hight Zoom Point & Shoot Camera</p>
+              <span class="price-design">$1200</span>
+              <div class="sony-cart cartsbtn">
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-cart-shopping "></i>
+                <i class="fa fa-eye"></i>
+              </div>
+            </div>
+            <!--end sony -->
+            <!--start sony -->
+            <div class="dell dh">
+              <div class="mainShowMessage">
+        <div class="showMessageSuccess">
+          <i class="fa-regular fa-circle-check"></i>
+  <span>SuccessFull Data Was Changed!</span>
+        </div>
+        </div>
+              <img src="/assets/todey-best-deals/Image (5).png" alt="" />
+              <p>Dell Optiplex 7000X7480 All-in-One Computer Monitor</p>
+              <span class="price-design">$299</span>
+              <div class="dell-cart cartsbtn">
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-cart-shopping "></i>
+                <i class="fa fa-eye"></i>
+              </div>
+            </div>
+            <!--end sony -->
+            <!--start Portable -->
+            <div class="potable dh">
+              <div class="mainShowMessage">
+        <div class="showMessageSuccess">
+          <i class="fa-regular fa-circle-check"></i>
+  <span>SuccessFull Data Was Changed!</span>
+        </div>
+        </div>
+              <img src="/assets/todey-best-deals/Image (6).png" alt="" />
+              <p>Portbale Wishing Machine, 11bs capacity Model 18NMFIAM</p>
+              <div class="portble-price">
+                <span class="discount" id="portble-discount">$865.99</span>
+                <span class="price-design" id="portble-price-now">$70</span>
+              </div>
+              <div class="potable-cart cartsbtn">
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-cart-shopping "></i>
+                <i class="fa fa-eye"></i>
+              </div>
+            </div>
+            <!--end portble -->
+            <!--start carb-engine -->
+            <div class="carb-engine dh">
+              <div class="mainShowMessage">
+        <div class="showMessageSuccess">
+          <i class="fa-regular fa-circle-check"></i>
+  <span>SuccessFull Data Was Changed!</span>
+        </div>
+        </div>
+              <img src="/assets/todey-best-deals/Image (7).png" alt="" />
+              <p>2-Barrel Caarburator Carb 2100 Engine increase Horsepower</p>
+              <div class="portble-price">
+                <span class="discount" id="carb-engine-discount"></span>
+                <span class="price-design" id="carb-engine-price-now">$160</span>
+              </div>
+              <div class="carb-cart cartsbtn">
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-cart-shopping "></i>
+                <i class="fa fa-eye"></i>
+              </div>
+            </div>
+            <!--end carb-engine  -->
+            <!-- start waterproof portble -->
+            <div class="waterproof-portble dh">
+              <div class="mainShowMessage">
+        <div class="showMessageSuccess">
+          <i class="fa-regular fa-circle-check"></i>
+  <span>SuccessFull Data Was Changed!</span>
+        </div>
+        </div>
+              <div class="water-proof-image">
+                <span>32% off</span>
+                <img src="/assets/todey-best-deals/Image (8).png" alt="" />
+              </div>
+              <p>JBL FLIP 4 Waterproof portable Bluetooth Speaker-Black</p>
+              <div class="waterproof-price">
+                <span class="discount" id="waterproof-discount">$360</span>
+                <span class="price-design" id="waterproof-price-now">$250</span>
+              </div>
+              <div class="waterproof-cart cartsbtn">
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-cart-shopping"></i>
+                <i class="fa fa-eye"></i>
+              </div>
+            </div>
+            <!-- end waterproof portble -->
+          </div>
+        </div>
+        <!-- end best deal products -->
+      </div>
+    </section>
+   
+  </div>
+ 
+  <script type="module" src="./src/homepage.js"></script>
+  <script src="./src/login.js"></script>
+  <!-- <script type="module" src="/src/register.js"></script> -->
+ 
+
+</body>
+
+</html>

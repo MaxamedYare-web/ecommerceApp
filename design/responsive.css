@@ -124,6 +124,8 @@
         width: 100%;  
         flex-direction: column;
     }
-  
+  .logo span{
+    display: none;
+  }
   
 }

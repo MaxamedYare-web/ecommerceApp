@@ -67,6 +67,11 @@
 }
 
 @media (max-width:600px){
+    .main-products-deals{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 20px;
+    }
     .category{
         margin-top: 15px;
         width: 100%;
@@ -82,5 +87,43 @@
         display: grid;
         width:100%;
         padding: 15px;
+       
     }
+    .dh{
+        margin-top: 15px;
+    }
+    .main-delivery{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #header-middle-product{
+        width: 100%;
+        padding:0 20px;
+    }
+    .header-title-product{
+        font-size: 23px !important;
+    }
+    #header-product-img , .sumer-image img{
+        width: 100%;
+        height: 150px;
+    }
+    .main-product{
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 0;
+        width: 100%;
+
+    }
+    .summer-product{
+        grid-column: 1 / span 0;
+        grid-row: 2 /span 2 ;
+        width: 100%;
+    }
+    .flip{
+        grid-row: 4 / span 4;
+        grid-column: 1 / sapn 0;
+        width: 100%;  
+        flex-direction: column;
+    }
+  
+  
 }
